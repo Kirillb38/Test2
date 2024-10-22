@@ -14,35 +14,12 @@ int main() {
     while (x <= endX) {
         double Y = cos(x) + log(x) - exp(x);
         
-        cout << x << "\t" << Y << endl;
+        if (Y < 0) {
+            cout << x << "\t" << Y << endl;
+        }
         
         x += step;
     }
-
-    return 0;
-}
-Результати роботи програми:
- 
-Рисунок 1 – Використання циклу while
-Лістинг коду:
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-int main() {
-    double x = 1.0;
-    double endX = 3.0;
-    double step = 0.2;
-
-    cout << "x\tY" << endl;
-    cout << "--------------------" << endl;
-
-    do {
-        double Y = cos(x) + log(x) - exp(x);
-        cout << x << "\t" << Y << endl;
-        x += step;
-    } while (x <= endX);
 
     return 0;
 }
