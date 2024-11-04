@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x = 1.0;
+    double endX = 3.0;
+    double step = 0.2;
+    
+    cout << "x\tY" << endl;
+    cout << "--------------------" << endl;
+
+    while (x <= endX) {
+        double Y = cos(x) + log(x) - exp(x);
+        
+        if (Y < 0) {
+            cout << x << "\t" << Y << endl;
+        }
+        
+        x += step;
+    }
+
+    return 0;
+}
